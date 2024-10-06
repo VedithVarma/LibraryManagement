@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utils.css" utils>
+    <style>
+    /* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  /*background-color: white;*/
+  cursor: pointer;
+}
+
+
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+/* 
+img:hover{
+  transform: rotateY(360deg);
+  transition: transform 2s;
+} */
+
+div.grid-container{
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 100px;
+    row-gap: 100px;
+  }
+  div.grid-item:hover{
+    transform: rotateY(360deg);
+    transition: transform 2s;
+  }
+
+</style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+            <a class="navbar-brand" href="index.html">Home</a>
+            <ul class="navbar-nav">
+                <li class="nav-item">        
+                    <div class="dropdown">
+                        <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown">
+                         Subject
+                        </button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item " href="maths.html">Mathematics</a>
+                          <a class="dropdown-item active" href="physics.html">Physics</a>
+                          <a class="dropdown-item" href="#">Electronics</a>
+                          <a class="dropdown-item" href="#">Electricals</a>
+                          <a class="dropdown-item" href="#">Quantum Physics</a>
+                          <a class="dropdown-item" href="computerscience.html">Computer science</a>
+                        </div>
+                      </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+            <div class="searchbar">
+                <input type="text" id="" name="" placeholder="Enter the book Name">
+            </div>
+            <div class="search">
+                <button type="button" class="btn btn-outline-success">Search</button>
+            </div>
+        </nav>
+
+
+    </header>
+    <main>
+      <div class="main">
+
+        <h1>MY LIBRARY.COM</h1>
+        <hr>
+        
+        <h2>PORTFOLIO</h2>
+        
+        <div id="myBtnContainer">
+          <button class="btn active" onclick="filterSelection('all')">physics</button>
+        </div>
+        
+        <!-- Portfolio Gallery Grid -->
+        
+          <!-- <div class="column cars">
+            <div class="content">
+              <img src="./physicsbook1.jpg" alt="Car" style="width:100%">
+              <h4>physics</h4>
+              <p>Lorem ipsum dolor..</p>
+            </div>
+          </div>
+          <div class="column cars">
+            <div class="content">
+            <img src="./physicsbook2.jpg" alt="Car" style="width:100%">
+              <h4>Physice Engineering-1</h4>
+              <p>Lorem ipsum dolor..</p>
+            </div>
+          </div>
+          <div class="column cars">
+            <div class="content">
+            <img src="./physicsbook3.jpg" alt="Car" style="width:100%">
+              <h4>Applied physics for Engineering</h4>
+              <p>Lorem ipsum dolor..</p>
+            </div>
+          </div>
+          <div class="column cars">
+            <div class="content">
+            <img src="./physicsbook4.jpg" alt="Car" style="width:100%">
+              <h4>Quanntum physics for Engineering</h4>
+              <p>Lorem ipsum dolor..</p>
+            </div>
+          </div> -->
+
+          <br>
+          <div class="grid-container">
+            <div class="grid-item"><img src="/physicsbook1.jpg" width="300" height="450" alt=""><br><p>Engineering-1 Physics</p></div>
+            <div class="grid-item"><img src="/physicsbook2.jpg" width="300" height="450" alt=""><br><p>Applied Physics</p></div>
+            <div class="grid-item"><img src="/physicsbook3.jpg" width="300" height="450" alt=""><br><p></p>Engineering-2 Physics</div>
+            <div class="grid-item"><img src="/physicsbook4.jpg" width="300" height="450" alt=""><br><p></p>Quantum Physics Beginners</div>
+            <div class="grid-item"><img src="/physicsbook5.jpg" width="300" height="450" alt=""><br><p>Quantum Computing</p></div>
+            <div class="grid-item"><img src="/physicsbook6.jpg" width="300" height="450" alt=""><br><p>Solid State Physics</p></div>
+          </div>
+        
+          
+        <!-- END GRID -->
+        </div>
+        
+        <!-- END MAIN -->
+        </div>
+        
+        <script>
+        filterSelection("all")
+        function filterSelection(c) {
+          var x, i;
+          x = document.getElementsByClassName("column");
+          if (c == "all") c = "";
+          for (i = 0; i < x.length; i++) {
+            w3RemoveClass(x[i], "show");
+            if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+          }
+        }
+        
+        function w3AddClass(element, name) {
+          var i, arr1, arr2;
+          arr1 = element.className.split(" ");
+          arr2 = name.split(" ");
+          for (i = 0; i < arr2.length; i++) {
+            if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+          }
+        }
+        
+        function w3RemoveClass(element, name) {
+          var i, arr1, arr2;
+          arr1 = element.className.split(" ");
+          arr2 = name.split(" ");
+          for (i = 0; i < arr2.length; i++) {
+            while (arr1.indexOf(arr2[i]) > -1) {
+              arr1.splice(arr1.indexOf(arr2[i]), 1);     
+            }
+          }
+          element.className = arr1.join(" ");
+        }
+        
+        
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+          btns[i].addEventListener("click", function(){
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+          });
+        }
+        </script>
+        
+            
+    </main>
+    <!--<footer id="dk-footer" class="dk-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-lg-4">
+            <div class="dk-footer-box-info">
+              <a href="main.html" class="footer-logo">
+                <img
+                  src="rename.jpg"
+                  alt="footer_logo"
+                  class="img-fluid"
+                  width="150"
+                  height="100"
+                />
+              </a>
+              <p class="footer-info-text" style="color: #ababab">
+                Whether you have 50 items or 5,000 items, your library is precious. With Libib, 
+                managing your own privacy library of books, movies, music & games is a snap. Create 
+               your account today
+              </p>
+              <div class="footer-social-link">
+                <h3>Follow us</h3>
+                <ul>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-facebook"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-google-plus"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-linkedin"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-instagram"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+               End Social link 
+            </div>
+          </div>
+           End Col 
+          <div class="col-md-12 col-lg-8">
+            <div class="contact-us contact-us-last">
+              <div class="contact-icon">
+                <i class="fa fa-volume-control-phone" aria-hidden="true"></i>
+              </div>
+              End contact Icon 
+              <div class="contact-info">
+                <h3>library@enquire.com</h3>
+                <p>Contant us</p>
+              </div>
+               End Contact Info 
+            </div>
+            End Contact Us
+
+            <div class="footer-widget footer-left-widget">
+              <div class="section-heading">
+                <h3>Useful Links</h3>
+                <span class="animate-border border-black"></span>
+              </div>
+              <ul>
+                <div class="row">
+                  <div class="col-md-12 col-lg-6">
+                    <li>
+                      <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                      <a href="about.html">about</a>
+                    </li>
+                    <li>
+                      <a href="contact.html">contact</a>
+                    </li>
+                  </div>
+                  <div class="col-md-12 col-lg-6">
+                    <li>
+                      <a href="maths.html">Maths</a>
+                    </li>
+                    <li>
+                      <a href="physics.html">physics</a>
+                    </li>
+                  </div>
+                </div>
+              </ul>
+            </div>
+             End Footer Widget 
+          </div>
+        </div>
+        End Widget Row
+      </div>
+    </footer>-->
+  </body>
+</html>

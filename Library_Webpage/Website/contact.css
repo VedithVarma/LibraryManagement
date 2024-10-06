@@ -1,0 +1,139 @@
+*{
+    margin:0;
+}
+
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #f2f2f2;
+}
+
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Contact Main */
+   input.text, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  } 
+  
+  input[type=submit] {
+    background-image: url(/Images/img1.jpg);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-image: url(/Images/img8.jpg);
+    transition: background-image 2s;
+  }
+  
+  /* Style the container/contact section */
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 10px;
+  }
+  
+  /* Create two columns that float next to eachother */
+  .column {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+
+  /* Contact Main Ends Here*/
+
+
+
+  /*Header*/
+  .navbar{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-image: url(/Images/img14.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 0px;
+    border-color: 4px solid aquamarine;
+    border-radius: 0px;;
+    padding: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: aliceblue;
+    font-size: 15px;
+  }
+   
+  div.menu:hover{
+    text-shadow: 12px 13px 15px aliceblue;
+    transition: text-shadow 1s;
+  }
+  
+  input{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;;
+  }
+  
+  input:hover{
+    background-image: linear-gradient(45deg,azure,grey);
+    transition: background-image 2s;
+  }
+
+  h1{
+    background-image: url(/Images/img3.jpg);
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 30px;
+    color: aliceblue;
+  }
+/*Header Ends Here*/
+
+
+
+main{
+  background-color: aliceblue;
+  background-size:cover;
+  background-repeat: no-repeat;
+  animation: animate 20s ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+
+@keyframes animate{
+  0%{
+      background-color:#fefefe;
+      
+  }
+  25%{
+      background-color:gainsboro
+      
+  }
+  50%{
+      background-color:#fefefe;
+  }
+  75%{
+      background-color:floralwhite;
+  }
+}
+  /*Main*/

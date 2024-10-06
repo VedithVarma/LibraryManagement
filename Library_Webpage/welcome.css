@@ -1,0 +1,74 @@
+
+body{
+    margin:"200px";
+    text-align: center;
+    padding: 200px;
+    background-image:url(/Images/img5.jpg);
+    position:absolute;
+    animation:animate 20s ease-in-out;
+    animation-iteration-count: infinite;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:aquamarine;
+}
+
+@keyframes animate{
+    0%{
+        background-image: url(/Images/img5.jpg);
+        
+    }
+    25%{
+        background-image: url(/Images/img6.jpg);
+        
+    }
+    50%{
+        background-image: url(/Images/img5.jpg);
+    }
+    75%{
+        background-image: url(/Images/img6.jpg);
+    }
+}
+
+h1{
+    font-size: 100;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+p{
+    font-size: 20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p.tour{
+    border:10px solid aqua;
+    padding:30px;
+    font-size: 20px;
+    font-family:monospace;
+    border-radius:30px;
+    margin-left:325px;
+    margin-right:325px;
+    margin-top:50px;
+    font-weight:bold;
+}
+
+p.tour:hover{
+    border:10px solid aquamarine;
+    color: aqua;
+    font-family: monospace;
+    font-style:italic;
+    border:12px solid aquamarine;
+    text-shadow:2px 3px 5px aquamarine;
+}
+
+p.quote{
+    font-size: 20px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+    color: aliceblue;
+    
+    
+}
+
+::selection{
+    color:aqua;
+}
